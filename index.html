@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>Portfolio Website</title>
+        <link rel="stylesheet" href="../zkremp418.github.io/stylesheet.css">
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var skills = document.querySelectorAll(".skill");
+                var currentIndex = 0;
+
+                function showSkill(index) {
+                    skills.forEach((skill, idx) => {
+                        skill.style.display = idx === index ? 'block' : 'none';
+                    });
+                }
+
+                document.getElementById('next').addEventListener('click', function() {
+                    currentIndex = (currentIndex + 1) % skills.length;
+                    showSkill(currentIndex);
+                });
+
+                document.getElementById('prev').addEventListener('click', function() {
+                    currentIndex = (currentIndex - 1 + skills.length) % skills.length;
+                    showSkill(currentIndex);
+                });
+
+                showSkill(0); // Show the first skill initially
+            });
+        </script>
+    </head>
+
+    <body>
+        <nav>
+            <a class='menu' href="#home">Home</a>
+            <a class='menu' href="#me">About</a>
+            <a class='menu' href="#skills">Skills</a>
+            <a class='menu' href="#contact">Contact</a>
+        </nav>
+        <h1 id="home">Welcome to my Online Portfolio</h1>
+        <p><img src="../zkremp418.github.io/1678131320515.jpg" style="border-radius: 50%;float: right;">This is a basic website porfolio to highlight some of my skills and experiences. In the following sections you will find a breif description of myself, my skills, links to some programming projects that I have worked on, and a space in order to download my resume/contact me.</p>
+        <br>
+        <h1 id="me">About Me</h1>
+        <p>
+            Hello! I'm Zachary Krempasky, a senior Computer Engineering major at Ohio Northern University. With just a couple classes left in the spring semester I plan on graduating in
+            May 2024. Most of the coursework that I have completed up to this point has given me the foundational knowledge I need in order to be successful in a early career opportunity.
+            I used the electives in my coursework to increase my knowledge in the computer science industry beyond the typical computer engineering path.
+        </p>
+        <br>
+        <p>
+            I am also a student-athlete at Ohio Northern University, which has required me to balance both course work and lacrosse, greatly improving my time management skills.
+            I have also had the opportunity to advance my leadership and communication skills by taking on additional team responsibilites. As a member of the leadership council for
+            three years, I had to communicate efficiently with my teammates and coaching staff on and off the field.
+        </p>
+        <br>
+        <p>
+            My previous work experience includes an internship with WaveLynx Technologies, one of the leading companies in access control. As a computer engineering intern on their team I worked closely with the 
+            production team in order to improve the quality of life on the production floor. The first project I took on was utilizing C/C++ in the the Arduino IDE to add a led function 
+            to the current programming fixture, letting workers know when the device was done. I then took on the task of utilizing breakpoint analysis in their python scripts in order
+            to optimize the timing of programming the readers. Throughout my internship I also ran information technology help and resolved various IT related problems such as setting up a 
+            Google Meet hardware kit and troubleshooting broken or down computers. The company purchased an adjacent office building while I was there so I helped extend the wireless network
+            to the new building(installed and configured a new switch to work with the current network)
+        </p>
+        <br>
+        <p>
+            Before my internship at WaveLynx I worked in the restaurant industry for over five years. Working in such a fast paced environment taught me the ability to remain calm and collected
+            during times of stress or adveristy. My strong work ehtic and desire to learn more/improve my skill set allowed me to advance from a dishwasher and busboy, up to a cook.
+        </p>
+        <br>
+        <h1 id="skills">Skills</h1>
+        <div id="skills-section">
+            <div class="skill" id="skill1">
+                <img src="../zkremp418.github.io/c++.png" alt="Skill 1" style="width: 15%;">
+                <h2>C++</h2>
+                <h2>Level: Proficient</h2>
+                <p>
+                    I have utilized C++ throughout my coursework at Ohio Northern University and I also plan on being a TA for programming in C++ this upcoming semester.
+                    I also used it during my internship with WaveLynx.
+                </p>
+            </div>
+
+            <div class="skill" id="skill2">
+                <img src="../zkremp418.github.io/python.png" alt="Skill 2" style="width: 15%;">
+                <h2>Python</h2>
+                <h2>Level: Advanced Beginner</h2>
+                <p>
+                    Most of my experience with Python comes from my internship with WaveLynx. I had to use it to write new and edit current test scripts
+                </p>
+            </div>
+
+            <div class="skill" id="skill3">
+                <img src="../zkremp418.github.io/linux.png" alt="Skill 3" style="width: 15%;">
+                <h2>Linux</h2>
+                <h2>Level: Competent</h2>
+                <p>
+                    I used a linux operating system for the entirety of my internship since some of their systems were solely linux based.
+                </p>
+            </div>
+
+            <div class="skill" id="skill4">
+                <img src="../zkremp418.github.io/git.png" alt="Skill 4" style="width: 15%;">
+                <h2>Git</h2>
+                <h2>Level: Competent</h2>
+                <p>
+                    I have used both Github and Gitlab when working on team projects. For my capstone project we are currently using Github in order to make changes to the application
+                    that we are developing. During my internship I utilized Gitlab since that is where WaveLynx keeps a lot of their work.
+                </p>
+            </div>
+
+            <div class="skill" id="skill5">
+                <img src="../zkremp418.github.io/java.svg" alt="Skill 5" style="width: 15%;">
+                <h2>Java</h2>
+                <h2>Level: Novice</h2>
+                <p>
+                    I learned Java in one of my first programming classes as a secondary option to C++.
+                </p>
+            </div>
+
+            <div class="skill" id="skill5">
+                <img src="../zkremp418.github.io/office.png" alt="Skill 6" style="width: 15%;">
+                <h2>Microsoft Office</h2>
+                <h2>Level: Proficient</h2>
+                <p>
+                    I have utilized many of the Microsoft Office services throughout high school and college so I have a firm basis in its uses
+                </p>
+            </div>
+        
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+
+        <h1 id="contact">Contact Me</h1>
+        <p>Email: zkremp418@gmail.com</p>
+        <p>Cell Number: (412)925-5007</p>
+        <a href="https://www.linkedin.com/in/zachary-krempasky-5641b122b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BnmV0DFMDTwGXKQy%2Fzv%2BLCQ%3D%3D"><img src="../zkremp418.github.io/linkedin.svg"></a>
+
+
+    </body>
+
+
+</html>
