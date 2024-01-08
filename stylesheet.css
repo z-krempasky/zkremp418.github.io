@@ -1,0 +1,57 @@
+body{
+    background-color: grey;
+    color: white;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    width: 300px;
+}
+
+.menu{
+    background-color: black;
+    padding: 18px;
+    color: white;
+    position: relative;
+    border: 2px solid rgb(128,128,128);
+    text-decoration: none;  
+}
+
+.menu:hover{
+    background-color: orange;
+    color: black;
+    cursor: pointer;
+}
+
+nav a{
+    color: white;
+    font-size: 25px;
+}
+
+
+p{
+    font-size: 20px;
+}
+
+h1{
+    font-size: 45px;
+    color: #ff751a;
+    text-decoration: underline #ff751a;
+}
+
+#skills-section{
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.skill{
+    display: none;
+}
+
+button{
+    margin: 5px;
+}
